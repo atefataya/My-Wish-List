@@ -12,6 +12,7 @@
 		DD1C32AE1C1B5D4000D23130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C32AC1C1B5D4000D23130 /* Main.storyboard */; };
 		DD1C32B01C1B5D4000D23130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1C32AF1C1B5D4000D23130 /* Assets.xcassets */; };
 		DD1C32B31C1B5D4000D23130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C32B11C1B5D4000D23130 /* LaunchScreen.storyboard */; };
+		DD1C32BE1C1B686600D23130 /* AddWishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C32BD1C1B686600D23130 /* AddWishVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DD1C32AF1C1B5D4000D23130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1C32B21C1B5D4000D23130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1C32B41C1B5D4000D23130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD1C32BD1C1B686600D23130 /* AddWishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWishVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		DD1C32A71C1B5D4000D23130 /* My-Wish-List */ = {
 			isa = PBXGroup;
 			children = (
+				DD1C32BA1C1B681200D23130 /* Modal */,
+				DD1C32BB1C1B681B00D23130 /* View */,
+				DD1C32BC1C1B683400D23130 /* Controller */,
 				DD1C32A81C1B5D4000D23130 /* AppDelegate.swift */,
-				DD1C32AA1C1B5D4000D23130 /* ViewController.swift */,
-				DD1C32AC1C1B5D4000D23130 /* Main.storyboard */,
 				DD1C32AF1C1B5D4000D23130 /* Assets.xcassets */,
 				DD1C32B11C1B5D4000D23130 /* LaunchScreen.storyboard */,
 				DD1C32B41C1B5D4000D23130 /* Info.plist */,
 			);
 			path = "My-Wish-List";
+			sourceTree = "<group>";
+		};
+		DD1C32BA1C1B681200D23130 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		DD1C32BB1C1B681B00D23130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C32AC1C1B5D4000D23130 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DD1C32BC1C1B683400D23130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C32AA1C1B5D4000D23130 /* ViewController.swift */,
+				DD1C32BD1C1B686600D23130 /* AddWishVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			files = (
 				DD1C32AB1C1B5D4000D23130 /* ViewController.swift in Sources */,
 				DD1C32A91C1B5D4000D23130 /* AppDelegate.swift in Sources */,
+				DD1C32BE1C1B686600D23130 /* AddWishVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
