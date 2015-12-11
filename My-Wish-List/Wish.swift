@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Post: NSObject, NSCoding {
+class Wish: NSObject, NSCoding {
     private var _imagePath: String!
     private var _title: String!
     private var _wishDesc: String!

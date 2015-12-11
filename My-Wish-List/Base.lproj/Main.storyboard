@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="ZtR-Zd-f3u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="ZtR-Zd-f3u" customClass="WishCell" customModule="My_Wish_List" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZtR-Zd-f3u" id="v04-Z6-LUs">
@@ -97,6 +97,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="aQD-wp-5w2" secondAttribute="bottom" constant="3" id="gxi-z1-sAh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLbl" destination="Gsw-Ua-Pd2" id="QgA-Rn-Ja6"/>
+                                            <outlet property="titleLbl" destination="Dxh-7C-Yek" id="gen-Is-H3h"/>
+                                            <outlet property="wishImg" destination="aQD-wp-5w2" id="gDX-V1-cRS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -144,11 +149,27 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-C5-yXf">
+                                        <rect key="frame" x="8" y="55" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="3kI-ZH-UEe"/>
+                                            <constraint firstAttribute="height" constant="30" id="x7k-zy-hEj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Canel">
+                                            <color key="titleColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="aAz-G9-AeU" eventType="touchUpInside" id="bsP-i0-jqR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.050980392159999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Mlg-C5-yXf" firstAttribute="leading" secondItem="RDe-W8-arR" secondAttribute="leading" constant="8" id="4PC-WK-JdI"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="93" id="8c2-0I-J1G"/>
                                     <constraint firstItem="A7Y-6I-LKs" firstAttribute="top" secondItem="RDe-W8-arR" secondAttribute="top" constant="36" id="Axj-e1-FmZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mlg-C5-yXf" secondAttribute="bottom" constant="8" id="HVB-dY-5gA"/>
                                     <constraint firstItem="A7Y-6I-LKs" firstAttribute="centerX" secondItem="RDe-W8-arR" secondAttribute="centerX" id="NAC-Qb-Q9r"/>
                                     <constraint firstAttribute="height" constant="93" id="RPP-PY-nEp"/>
                                     <constraint firstItem="A7Y-6I-LKs" firstAttribute="centerX" secondItem="RDe-W8-arR" secondAttribute="centerX" id="fuW-lE-GqK"/>
@@ -166,6 +187,9 @@
                                 <state key="normal" title="+ Add Pic">
                                     <color key="titleColor" red="0.98431372549019602" green="0.0" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPicButtonPressed:" destination="aAz-G9-AeU" eventType="touchUpInside" id="mQr-3b-tcs"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpV-UV-w1b">
                                 <rect key="frame" x="20" y="285" width="560" height="30"/>
@@ -236,6 +260,9 @@
                                 <state key="normal" title="Make a Wish">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeButtonPressed:" destination="aAz-G9-AeU" eventType="touchUpInside" id="upE-Z2-K50"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -257,6 +284,7 @@
                             <constraint firstItem="rpV-UV-w1b" firstAttribute="leading" secondItem="sti-VM-shg" secondAttribute="leadingMargin" id="OZY-tb-puN"/>
                             <constraint firstItem="Mmx-3h-ipA" firstAttribute="top" secondItem="kyA-rt-BoV" secondAttribute="bottom" constant="13" id="P9C-q0-BYC"/>
                             <constraint firstItem="lM6-Py-SbM" firstAttribute="top" secondItem="rpV-UV-w1b" secondAttribute="bottom" constant="14" id="PQx-OC-egp"/>
+                            <constraint firstItem="dzU-Ky-mkE" firstAttribute="top" secondItem="RDe-W8-arR" secondAttribute="bottom" constant="20" id="PsC-SQ-OpS"/>
                             <constraint firstItem="Mmx-3h-ipA" firstAttribute="trailing" secondItem="sti-VM-shg" secondAttribute="trailingMargin" id="QTm-Lg-Y55"/>
                             <constraint firstItem="kyA-rt-BoV" firstAttribute="leading" secondItem="sti-VM-shg" secondAttribute="leadingMargin" id="XH6-Ms-fBg"/>
                             <constraint firstItem="eAJ-Da-OLY" firstAttribute="leading" secondItem="sti-VM-shg" secondAttribute="leadingMargin" id="YXt-9c-2Ws"/>
@@ -272,6 +300,15 @@
                             <constraint firstItem="rpV-UV-w1b" firstAttribute="trailing" secondItem="sti-VM-shg" secondAttribute="trailingMargin" id="vQQ-Qr-sSE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="lM6-Py-SbM" id="lEs-ss-w1l"/>
+                        <outlet property="notesField" destination="TGZ-mj-t7f" id="Gf0-TT-kob"/>
+                        <outlet property="priceField" destination="Mmx-3h-ipA" id="rJv-de-U2a"/>
+                        <outlet property="shopField" destination="6Vb-UV-Fkr" id="cQL-IJ-GvS"/>
+                        <outlet property="titleField" destination="rpV-UV-w1b" id="wCv-RD-uha"/>
+                        <outlet property="urlField" destination="kyA-rt-BoV" id="Mpz-Fg-BKc"/>
+                        <outlet property="wishImg" destination="66E-GS-UrR" id="0Hh-bb-7ap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWF-OW-fSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
