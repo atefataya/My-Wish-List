@@ -13,6 +13,7 @@
 		DD1C32B01C1B5D4000D23130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1C32AF1C1B5D4000D23130 /* Assets.xcassets */; };
 		DD1C32B31C1B5D4000D23130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C32B11C1B5D4000D23130 /* LaunchScreen.storyboard */; };
 		DD1C32BE1C1B686600D23130 /* AddWishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C32BD1C1B686600D23130 /* AddWishVC.swift */; };
+		DD1C32C01C1B6CE700D23130 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C32BF1C1B6CE700D23130 /* Wish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DD1C32B21C1B5D4000D23130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1C32B41C1B5D4000D23130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1C32BD1C1B686600D23130 /* AddWishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWishVC.swift; sourceTree = "<group>"; };
+		DD1C32BF1C1B6CE700D23130 /* Wish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		DD1C32BA1C1B681200D23130 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				DD1C32BF1C1B6CE700D23130 /* Wish.swift */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1C32C01C1B6CE700D23130 /* Wish.swift in Sources */,
 				DD1C32AB1C1B5D4000D23130 /* ViewController.swift in Sources */,
 				DD1C32A91C1B5D4000D23130 /* AppDelegate.swift in Sources */,
 				DD1C32BE1C1B686600D23130 /* AddWishVC.swift in Sources */,
