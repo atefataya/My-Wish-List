@@ -46,9 +46,23 @@ class AddWishVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
    
     
     @IBAction func makeButtonPressed(sender: AnyObject) {
+        
+        if let title = titleField.text , let desc = descriptionField.text , let url = urlField.text , let price = priceField.text , let shop = shopField.text , let notes = notesField.text, let img = wishImg.image {
+            let imgPath = DataService.instance.saveImageAndCreatePath(img)
+            let wish = Wish (imagePath: imgPath, title: title, wishDesc: desc, wishURL: url, wishPrice: price, wishShop: shop, wishNotes: notes)
+            DataService.instance.addWish(wish)
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        wishImg.image = image
     }
 
     

@@ -286,6 +286,7 @@
                             <constraint firstItem="lM6-Py-SbM" firstAttribute="top" secondItem="rpV-UV-w1b" secondAttribute="bottom" constant="14" id="PQx-OC-egp"/>
                             <constraint firstItem="dzU-Ky-mkE" firstAttribute="top" secondItem="RDe-W8-arR" secondAttribute="bottom" constant="20" id="PsC-SQ-OpS"/>
                             <constraint firstItem="Mmx-3h-ipA" firstAttribute="trailing" secondItem="sti-VM-shg" secondAttribute="trailingMargin" id="QTm-Lg-Y55"/>
+                            <constraint firstItem="rpV-UV-w1b" firstAttribute="top" secondItem="dzU-Ky-mkE" secondAttribute="bottom" constant="22" id="R9Z-jm-6jP"/>
                             <constraint firstItem="kyA-rt-BoV" firstAttribute="leading" secondItem="sti-VM-shg" secondAttribute="leadingMargin" id="XH6-Ms-fBg"/>
                             <constraint firstItem="eAJ-Da-OLY" firstAttribute="leading" secondItem="sti-VM-shg" secondAttribute="leadingMargin" id="YXt-9c-2Ws"/>
                             <constraint firstItem="hzD-UH-v5Y" firstAttribute="top" secondItem="eAJ-Da-OLY" secondAttribute="bottom" constant="20" id="bYO-ex-RtB"/>
@@ -299,6 +300,12 @@
                             <constraint firstItem="dzU-Ky-mkE" firstAttribute="height" secondItem="66E-GS-UrR" secondAttribute="height" id="vBS-id-7S9"/>
                             <constraint firstItem="rpV-UV-w1b" firstAttribute="trailing" secondItem="sti-VM-shg" secondAttribute="trailingMargin" id="vQQ-Qr-sSE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R9Z-jm-6jP"/>
+                                <exclude reference="pqW-cC-GcO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="descriptionField" destination="lM6-Py-SbM" id="lEs-ss-w1l"/>
