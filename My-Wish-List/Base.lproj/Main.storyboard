@@ -117,6 +117,9 @@
                             <constraint firstItem="6af-Fc-6jT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vZt-eF-KYY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6af-Fc-6jT" id="hWo-W5-Uvc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,14 +179,14 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66E-GS-UrR">
-                                <rect key="frame" x="225" y="113" width="150" height="150"/>
+                                <rect key="frame" x="200" y="113" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="MCZ-Nk-vke"/>
-                                    <constraint firstAttribute="height" constant="150" id="muB-lD-jZL"/>
+                                    <constraint firstAttribute="width" constant="200" id="MCZ-Nk-vke"/>
+                                    <constraint firstAttribute="height" constant="200" id="muB-lD-jZL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzU-Ky-mkE">
-                                <rect key="frame" x="225" y="113" width="150" height="150"/>
+                                <rect key="frame" x="200" y="113" width="200" height="200"/>
                                 <state key="normal" title="+ Add Pic">
                                     <color key="titleColor" red="0.98431372549019602" green="0.0" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
